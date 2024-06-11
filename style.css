@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #080808;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.wrapper{
+    padding: 10px 100px;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    font-weight: 500;
+    font-size: 16px;
+    width: 400px;
+}
+
+.body{
+    margin-top: 32px;
+    width: 400px;
+    padding: 0;
+}
+
+.body ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.body ul .row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.row .title, .row .total{
+    width: 100px;
+    text-align: left;
+}
+
+.qty{
+    position: relative;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    width: 100px;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty__minus, .qty__plus{
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+}
+
+
+.qty__input{
+    border: 0;
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.footer{
+    margin-top: 32px;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+
+.footer .clear{
+    padding: 8px 12px;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    transition: all ease-in-out;
+    cursor: pointer;
+    width: 100px;
+}
+
+.footer .clear:hover{
+    background: rgba(255, 255, 255, .4);
+}
+
+.footer .count-total-sum{
+    background: rgba(14, 216, 14, 0.8);
+    border: 1px solid white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all ease-in-out;
+}
+
+.footer .count-total-sum:hover{
+    background: rgba(14, 216, 14, 0.4);
+}
